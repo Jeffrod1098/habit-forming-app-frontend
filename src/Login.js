@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import habitImg from "./image/habits.jpg"
 import Nav from "./Nav"
+import "./Login.css"
 
 
 const Login = () =>{
@@ -35,10 +36,10 @@ const Login = () =>{
         <div className='App' style={backgroundImageStyle}>
         <Nav />
         {/* under nav bar  */}
-        <div class="form block p-6 rounded-lg shadow-lg bg-white max-w-md">
+        <div className="form block p-6 rounded-lg shadow-lg bg-white max-w-md">
             <form onSubmit={click}>
-                <div class="form-group mb-6">
-                    <input onChange={handleUserNameChange} type="text" class="form-control block
+                <div className="form-group mb-6">
+                    <input onChange={handleUserNameChange} type="text" className="form-control block
     w-full
     px-3
     py-1.5
@@ -54,8 +55,8 @@ const Login = () =>{
     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
                         placeholder="User Name" />
                 </div>
-                <div class="form-group mb-6">
-                    <input onChange={handlePasswordChange} type="password" class="form-control block
+                <div className="form-group mb-6">
+                    <input onChange={handlePasswordChange} type="password" className="form-control block
     w-full
     px-3
     py-1.5
@@ -71,7 +72,7 @@ const Login = () =>{
     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput126"
                         placeholder="Password" />
                 </div>
-                <button type="submit" class="
+                <button type="submit" className="
   w-full
   px-6
   py-2.5

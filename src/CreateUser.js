@@ -43,10 +43,10 @@ const CreateUser = () => {
             {/* under nav bar  */}
 
             <div className="formContainer">
-                <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
+                <div className="block p-6 rounded-lg shadow-lg bg-white max-w-md">
                     <form onSubmit={click}>
-                        <div class="form-group mb-6">
-                            <input onChange={handleUserNameChange} type="text" class="form-control block
+                        <div className="form-group mb-6">
+                            <input onChange={handleUserNameChange} type="text" className="form-control block
         w-full
         px-3
         py-1.5
@@ -59,11 +59,11 @@ const CreateUser = () => {
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput124"
                                 placeholder="User Name" />
                         </div>
-                        <div class="form-group mb-6">
-                            <input onChange={handleEmailChange} type="email" class="form-control block
+                        <div className="form-group mb-6">
+                            <input onChange={handleEmailChange} type="email" className="form-control block
         w-full
         px-3
         py-1.5
@@ -79,8 +79,8 @@ const CreateUser = () => {
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
                                 placeholder="Email address" />
                         </div>
-                        <div class="form-group mb-6">
-                            <input onChange={handlePasswordChange} type="password" class="form-control block
+                        <div className="form-group mb-6">
+                            <input onChange={handlePasswordChange} type="password" className="form-control block
         w-full
         px-3
         py-1.5
@@ -96,7 +96,7 @@ const CreateUser = () => {
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput126"
                                 placeholder="Password" />
                         </div>
-                        <button type="submit" class="
+                        <button type="submit" className="
       w-full
       px-6
       py-2.5
