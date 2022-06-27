@@ -1,6 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import habitImg from "./image/habits.jpg"
+import "../src/CreateUser.css"
+import Nav from "./Nav"
+
 
 const CreateUser = () => {
 
@@ -26,24 +30,23 @@ const CreateUser = () => {
         setPassword(event.target.value)
     }
 
+    const backgroundImageStyle = {
+        backgroundImage: `url("${habitImg}")`,
+        backgroundSize: "cover",
+        width: "100vw",
+    }
+
     return (
-        <div>
-            <div className='nav border-solid border-4 border-slate-300 bg-slate-300'>
-                <div className="logo">
-                    <h3 className='text-3xl text-slate-700'>MyHabits</h3>
-                </div>
-                <nav class="flex justify-center space-x-4">
-                    <a href="/home" class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Home</a>
-                    <a href="/team" class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Team</a>
-                    <a href="/login" class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Login</a>
-                    <a href="/explore" class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Explore</a>
-                </nav>
-            </div>
+        <div className='App' style={backgroundImageStyle}>
+            <Nav />
+
             {/* under nav bar  */}
-            <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
-                <form onSubmit={click}>
-                    <div class="form-group mb-6">
-                        <input onChange={handleUserNameChange} type="text" class="form-control block
+
+            <div className="formContainer">
+                <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
+                    <form onSubmit={click}>
+                        <div class="form-group mb-6">
+                            <input onChange={handleUserNameChange} type="text" class="form-control block
         w-full
         px-3
         py-1.5
@@ -57,10 +60,10 @@ const CreateUser = () => {
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
-                            placeholder="User Name" />
-                    </div>
-                    <div class="form-group mb-6">
-                        <input onChange={handleEmailChange} type="email" class="form-control block
+                                placeholder="User Name" />
+                        </div>
+                        <div class="form-group mb-6">
+                            <input onChange={handleEmailChange} type="email" class="form-control block
         w-full
         px-3
         py-1.5
@@ -74,10 +77,10 @@ const CreateUser = () => {
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
-                            placeholder="Email address" />
-                    </div>
-                    <div class="form-group mb-6">
-                        <input onChange={handlePasswordChange} type="password" class="form-control block
+                                placeholder="Email address" />
+                        </div>
+                        <div class="form-group mb-6">
+                            <input onChange={handlePasswordChange} type="password" class="form-control block
         w-full
         px-3
         py-1.5
@@ -91,9 +94,9 @@ const CreateUser = () => {
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput126"
-                            placeholder="Password" />
-                    </div>
-                    <button type="submit" class="
+                                placeholder="Password" />
+                        </div>
+                        <button type="submit" class="
       w-full
       px-6
       py-2.5
@@ -111,7 +114,8 @@ const CreateUser = () => {
       transition
       duration-150
       ease-in-out">Sign up</button>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     )
