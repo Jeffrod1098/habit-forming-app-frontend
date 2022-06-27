@@ -7,24 +7,24 @@ const CreateUser = () => {
     const [userName, setUserName] = useState({})
     const [email, setEmail] = useState({})
     const [password, setPassword] = useState({})
-  
+
     const click = () => {
-      axios.post('http://localhost:4000/',{
-        userName: userName,
-        email: email,
-        password: password
-      })
+        axios.post('http://localhost:4000/', {
+            userName: userName,
+            email: email,
+            password: password
+        })
     }
-  
+
     const handleUserNameChange = event => {
-      setUserName(event.target.value)
-  }
-  const handleEmailChange = event => {
-      setEmail(event.target.value)
-  }
-  const handlePasswordChange = event => {
-      setPassword(event.target.value)
-  }
+        setUserName(event.target.value)
+    }
+    const handleEmailChange = event => {
+        setEmail(event.target.value)
+    }
+    const handlePasswordChange = event => {
+        setPassword(event.target.value)
+    }
 
     return (
         <div>
@@ -41,9 +41,9 @@ const CreateUser = () => {
             </div>
             {/* under nav bar  */}
             <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
-  <form onSubmit={click}>
-  <div class="form-group mb-6">
-      <input onChange={handleUserNameChange} type="text" class="form-control block
+                <form onSubmit={click}>
+                    <div class="form-group mb-6">
+                        <input onChange={handleUserNameChange} type="text" class="form-control block
         w-full
         px-3
         py-1.5
@@ -57,10 +57,10 @@ const CreateUser = () => {
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
-        placeholder="User Name"/>
-    </div>
-    <div class="form-group mb-6">
-      <input onChange={handleEmailChange} type="email" class="form-control block
+                            placeholder="User Name" />
+                    </div>
+                    <div class="form-group mb-6">
+                        <input onChange={handleEmailChange} type="email" class="form-control block
         w-full
         px-3
         py-1.5
@@ -74,10 +74,10 @@ const CreateUser = () => {
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
-        placeholder="Email address"/>
-    </div>
-    <div class="form-group mb-6">
-      <input onChange={handlePasswordChange} type="password" class="form-control block
+                            placeholder="Email address" />
+                    </div>
+                    <div class="form-group mb-6">
+                        <input onChange={handlePasswordChange} type="password" class="form-control block
         w-full
         px-3
         py-1.5
@@ -91,9 +91,9 @@ const CreateUser = () => {
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput126"
-        placeholder="Password"/>
-    </div>
-    <button type="submit" class="
+                            placeholder="Password" />
+                    </div>
+                    <button type="submit" class="
       w-full
       px-6
       py-2.5
@@ -111,8 +111,8 @@ const CreateUser = () => {
       transition
       duration-150
       ease-in-out">Sign up</button>
-  </form>
-</div>
+                </form>
+            </div>
         </div>
     )
 }
