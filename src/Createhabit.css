@@ -1,0 +1,41 @@
+.createbtn {
+    background-color: #b7e3f0;
+    border: 2px solid black;
+    color: black;
+    /* padding: 10px; */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 30px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.today {
+    font-size: 20px;
+    color: #0a0c0a;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#exampleInput125 {
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid #0a0c0a;
+    border-radius: 50px;
+    background-color: #b7e3f0;
+    width: 180vh;
+}
+form {
+    margin: 0 auto;
+    width: 85%;
+    
+}
+#exampleInput127 {
+    padding: 65px;
+    margin: 20px;
+    border: 2px solid #0a0c0a;
+    border-radius: 50px;
+    background-color: #b7e3f0;
+    width: 180vh;
+}
+
+.createbtn:hover {
+    background-color: white;
+}
