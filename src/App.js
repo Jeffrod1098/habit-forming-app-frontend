@@ -1,12 +1,9 @@
 import "./App.css";
-import Home from "./Home"
-import CreateHabit from "./CreateHabit";
-
+import Landing from "./Landing";
 
 function App() {
   return <div className="App">
-    {/* <Home /> */}
-    <CreateHabit />
+<Landing />
   </div>;
 }
 

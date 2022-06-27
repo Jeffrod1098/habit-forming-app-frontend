@@ -1,3 +1,26 @@
 .App {
   text-align: center;
+  height: 100vh;
+  font-family: Nunito;
+}
+
+
+.logo{
+  display: flex;
+  margin-left: 5%;
+  padding-top: 3%;
+  justify-content: space-between;
+}
+
+.welcome{
+  display: flex;
+  flex-direction: column;
+  padding-top: 30%;
+  align-items: center;
+}
+
+button{
+  width: 10%;
+  color: white;
+  margin-top: 2%;
 }
