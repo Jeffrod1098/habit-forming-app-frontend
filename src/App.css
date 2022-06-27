@@ -4,26 +4,25 @@
   font-family: Nunito;
 }
 
-
-.nav{
+.nav {
   display: flex;
   /* margin-left: 5%; */
   padding-top: 3%;
   justify-content: space-between;
 }
 
-.logo{
+.logo {
   margin-left: 3%;
 }
 
-.welcome{
+.welcome {
   display: flex;
   flex-direction: column;
   padding-top: 30vh;
   align-items: center;
 }
 
-button{
+button {
   width: 10%;
   color: white;
   margin-top: 2%;
