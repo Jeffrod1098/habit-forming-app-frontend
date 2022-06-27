@@ -5,13 +5,11 @@ import axios from "axios";
 const Login = () =>{
 
     const [userName, setUserName] = useState({})
-    const [email, setEmail] = useState({})
     const [password, setPassword] = useState({})
 
     const click = () => {
         axios.post('http://localhost:4000/', {
             userName: userName,
-            email: email,
             password: password
         })
     }
@@ -19,12 +17,11 @@ const Login = () =>{
     const handleUserNameChange = event => {
         setUserName(event.target.value)
     }
-    const handleEmailChange = event => {
-        setEmail(event.target.value)
-    }
+
     const handlePasswordChange = event => {
         setPassword(event.target.value)
     }
+
     return(
         <div>
         <div className='nav border-solid border-4 border-slate-300 bg-slate-300'>
@@ -57,23 +54,6 @@ const Login = () =>{
     m-0
     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
                         placeholder="User Name" />
-                </div>
-                <div class="form-group mb-6">
-                    <input onChange={handleEmailChange} type="email" class="form-control block
-    w-full
-    px-3
-    py-1.5
-    text-base
-    font-normal
-    text-gray-700
-    bg-white bg-clip-padding
-    border border-solid border-gray-300
-    rounded
-    transition
-    ease-in-out
-    m-0
-    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
-                        placeholder="Email address" />
                 </div>
                 <div class="form-group mb-6">
                     <input onChange={handlePasswordChange} type="password" class="form-control block
