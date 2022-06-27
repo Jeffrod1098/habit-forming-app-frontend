@@ -2,25 +2,27 @@
   text-align: center;
   height: 100vh;
   font-family: Nunito;
-
 }
 
-
-.logo{
+.nav {
   display: flex;
-  margin-left: 5%;
+  /* margin-left: 5%; */
   padding-top: 3%;
   justify-content: space-between;
 }
 
-.welcome{
+.logo {
+  margin-left: 3%;
+}
+
+.welcome {
   display: flex;
   flex-direction: column;
   padding-top: 30vh;
   align-items: center;
 }
 
-button{
+button {
   width: 10%;
   color: white;
   margin-top: 2%;
