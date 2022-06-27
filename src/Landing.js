@@ -1,5 +1,5 @@
 import React from "react";
-// import '../src/App.css'
+import '../src/App.css'
 import habitImg from "./image/habits.jpg"
 
 

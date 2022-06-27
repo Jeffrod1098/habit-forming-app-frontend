@@ -1,5 +1,8 @@
-* {
-  border: solid 1px black;
+.App {
+  text-align: center;
+  height: 100vh;
+  font-family: Nunito;
+
 }
 
 
@@ -13,7 +16,7 @@
 .welcome{
   display: flex;
   flex-direction: column;
-  padding-top: 30%;
+  padding-top: 30vh;
   align-items: center;
 }
 
