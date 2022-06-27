@@ -18,11 +18,11 @@ const Landing = () => {
                 <div data-aos='fade-up' data-aos-duration='3000' className='welcome'>
                     <h1 className="text-5xl text-slate-700 font-bold">Welcome to  MyHabits</h1>
                     <h2 className='text-xl text-slate-700'>A web app that helps you keep track of your habits and create new ones.</h2>
-                    {/* <Link to="/createUser"> */}
+                    <Link to="/createUser">
                         <div>
-                            <button className='bg-slate-500 rounded-full hover:bg-sky-700'>Sign Up </button>
+                            <div className='text-xl text-slate-800 font-bold hover:text-sky-600'>Click Here To Sign Up </div>
                         </div>
-                    {/* </Link> */}
+                    </Link>
                 </div>
 
             </div>
