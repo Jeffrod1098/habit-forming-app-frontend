@@ -12,6 +12,7 @@ import UserPage from "./UserPage";
 function App() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
   return (
     <div className="App">
       {/* <Landing /> */}
@@ -22,7 +23,19 @@ function App() {
         <Routes>
           <Route path="/home" element={<UserPage userName={userName} />} />
           <Route path="/" element={<Landing />} />
-          <Route path="/createUser" element={<CreateUser />} />
+          <Route
+            path="/createUser"
+            element={
+              <CreateUser
+                userName={userName}
+                setUserName={setUserName}
+                password={password}
+                setPassword={setPassword}
+                email={email}
+                setEmail={setEmail}
+              />
+            }
+          />
           <Route path="/createHabit" element={<CreateHabit />} />
           <Route
             path="/login"
