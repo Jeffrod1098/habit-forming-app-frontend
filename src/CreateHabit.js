@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import habitImg from "./image/habits.jpg"
 import Nav from "./Nav";
+import "./Createhabit.css"
 
 
 
@@ -35,6 +36,12 @@ const CreateHabit = () => {
         event.preventDefault()
         click()
     }
+    // const backgroundImageStyle = {
+    //     backgroundImage: `url("${habitImg}")`,
+    //     backgroundSize: "cover",
+    //     width: "100vw",
+    // }
+
     const backgroundImageStyle = {
         backgroundImage: `url("${habitImg}")`,
         backgroundSize: "cover",

@@ -6,6 +6,7 @@ import CreateHabit from "./CreateHabit";
 import Login from "./Login";
 import { Route, Routes } from "react-router-dom";
 import HabitList from "./HabitList";
+import UserPage from "./UserPage";
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
       {/* <Login /> */}
       <main>
         <Routes>
+          <Route path="/home" element={<UserPage />}/>
           <Route path="/" element={<Landing />} />
           <Route path="/createUser" element={<CreateUser />} />
           <Route path="/createHabit" element={<CreateHabit />} />
