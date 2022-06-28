@@ -8,16 +8,19 @@ import "./Login.css"
 
 const Login = () =>{
 
-    const [userName, setUserName] = useState({})
-    const [password, setPassword] = useState({})
+    const [userName, setUserName] = useState("")
+    const [password, setPassword] = useState("")
 
     const click = (e) => {
         e.preventDefault()
-        axios.get('http://localhost:4000/userLogin/login', {username: userName,
-        password: password}).then(
-            res=>{
-                console.log(res)
-                
+        axios.post('http://localhost:4000/userLogin/login', 
+        
+        {
+            'username': userName,
+            'password': password
+        })
+        .then(res=>{
+            console.log(res)    
         })
 
     }
