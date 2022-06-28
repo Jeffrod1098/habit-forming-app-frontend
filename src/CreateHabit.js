@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import habitImg from "./image/habits.jpg";
 import Nav from "./Nav";
+import "./Createhabit.css";
 
 const CreateHabit = () => {
   const [habitName, setHabitName] = useState({});
@@ -31,6 +32,12 @@ const CreateHabit = () => {
     event.preventDefault();
     click();
   };
+  // const backgroundImageStyle = {
+  //     backgroundImage: `url("${habitImg}")`,
+  //     backgroundSize: "cover",
+  //     width: "100vw",
+  // }
+
   const backgroundImageStyle = {
     backgroundImage: `url("${habitImg}")`,
     backgroundSize: "cover",
@@ -95,7 +102,6 @@ const CreateHabit = () => {
             </div>
 
             <div class="flex justify-center">
-              
               <div class="form-check form-check-inline">
                 <input
                   class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -165,7 +171,7 @@ const CreateHabit = () => {
                   value="option2"
                 />
                 <label
-                  class="form-check-label inline-block text-gray-800" 
+                  class="form-check-label inline-block text-gray-800"
                   for="inlineRadio20"
                 >
                   Fri
@@ -187,7 +193,7 @@ const CreateHabit = () => {
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input 
+                <input
                   class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                   type="checkbox"
                   name="inlineRadioOptions"
