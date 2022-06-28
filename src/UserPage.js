@@ -1,24 +1,25 @@
 import React from "react";
-import axios from 'axios'
-import { useState } from 'react'
-import habitImg from "./image/habits.jpg"
+import axios from "axios";
+import { useState } from "react";
+import habitImg from "./image/habits.jpg";
 import Nav from "./Nav";
-import "./UserPage.css"
+import "./UserPage.css";
 
-const UserPage = () => {
+const UserPage = (props) => {
+  const backgroundImageStyle = {
+    backgroundImage: `url("${habitImg}")`,
+    backgroundSize: "cover",
+    width: "100vw",
+  };
 
-    const backgroundImageStyle = {
-        backgroundImage: `url("${habitImg}")`,
-        backgroundSize: "cover",
-        width: "100vw",
-    }
+  return (
+    <div className="App" style={backgroundImageStyle}>
+      <Nav />
+      <h1 className="text-5xl text-slate-700 font-bold">
+        Welcome {props.userName}
+      </h1>
+    </div>
+  );
+};
 
-    return(
-        <div className="App" style={backgroundImageStyle}>
-            <Nav />
-            <h1 className="text-5xl text-slate-700 font-bold">Welcome "User Name"</h1>
-        </div>
-    )
-}
-
-export default UserPage
+export default UserPage;
