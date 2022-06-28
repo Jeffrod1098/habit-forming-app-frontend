@@ -11,11 +11,15 @@ const Login = () =>{
     const [userName, setUserName] = useState({})
     const [password, setPassword] = useState({})
 
-    const click = () => {
-        axios.post('http://localhost:4000/', {
-            userName: userName,
-            password: password
+    const click = (e) => {
+        e.preventDefault()
+        axios.get('http://localhost:4000/userLogin/login', {username: userName,
+        password: password}).then(
+            res=>{
+                console.log(res)
+                
         })
+
     }
 
     const handleUserNameChange = event => {
@@ -39,7 +43,7 @@ const Login = () =>{
         <div className="form block p-6 rounded-lg shadow-lg bg-white max-w-md">
             <form onSubmit={click}>
                 <div className="form-group mb-6">
-                    <input onChange={handleUserNameChange} type="text" className="form-control block
+                    <input  onChange={handleUserNameChange} type="text" className="form-control block
     w-full
     px-3
     py-1.5
