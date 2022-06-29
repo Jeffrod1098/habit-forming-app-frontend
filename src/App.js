@@ -36,7 +36,7 @@ function App() {
               />
             }
           />
-          <Route path="/createHabit" element={<CreateHabit />} />
+          <Route path="/createHabit" element={<CreateHabit userName={userName} />} />
           <Route
             path="/login"
             element={
