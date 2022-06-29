@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Nav from "./Nav"
 import habitImg from "./image/habits.jpg"
+import Draggable from 'react-draggable';
 
 
 const HabitList = () => {
@@ -28,6 +29,7 @@ const HabitList = () => {
     
     {habits.map((habit) => {
         return (
+            
             <div class="flex justify-center">
                 <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
                     <div class="py-3 px-6 border-b border-gray-300">
@@ -57,6 +59,7 @@ ease-in-out">Delete</button>
                     </div>
                 </div>
             </div>
+            
         )
     })}
 
@@ -108,6 +111,7 @@ ease-in-out">Delete</button>
 
 {habits.map((habit) => {
         return (
+            <Draggable>
             <div class="flex justify-center">
                 <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
                     <div class="py-3 px-6 border-b border-gray-300">
@@ -137,6 +141,7 @@ ease-in-out">Delete</button>
                     </div>
                 </div>
             </div>
+            </Draggable>
         )
     })}
 
