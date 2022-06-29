@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+###MyHabits
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Screen Shot 2022-06-29 at 9 35 53 AM](https://user-images.githubusercontent.com/99563824/176451845-bedc33f3-31a2-406e-a805-5eb16e0202e3.png)
 
-## Available Scripts
+MyHabits is an app to set and keep track of goals.
 
-In the project directory, you can run:
+##Technology:
 
-### `npm start`
+HTML, CSS, Javascript, React, Mongoose, Express, Tailwind, Axios
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##WireFraming
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![9e1c404d-12d4-4bbd-9c16-5c2b8fe3ebc8](https://user-images.githubusercontent.com/99563824/176451896-66dc0c93-d7d9-4e03-9b0c-d3ef059aba05.png)
 
-### `npm test`
+##User Stories:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- As a user, I would like to have a landing page with a description of the app
+- As a user, I'd like to be able to log in and keep track of my progress, or add new goals.
+- As a user, I would like a daily listing of my goals.
+- As a user, I would like to be able to create new goals and edit and delete them.
+- As a user, I would like to be able to add new habits that don’t exist in the database.
 
-### `npm run build`
+#MVP
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- As a user, I would like a calendar that shows which day I completed all my goals.
+- We plan to have a landing page with a description of the app and have a login and keep track of the user's progress or add new goals/habits.
+- We would also have a daily listing of goals for each user.
+- A calendar that shows which day the user completed their goals/ habits.
+- We would also let the user be able to create new goals/habits and edit and delete them
+- We would also let users add new habits that don’t exist in the database.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#Stretch
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add a friends list
+- Seeing the habits of your friends
+- Include your location to compete with people around you
+- Add tags list to each habit
