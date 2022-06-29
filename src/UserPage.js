@@ -6,6 +6,7 @@ import Nav from "./Nav";
 import "./UserPage.css";
 import Draggable from 'react-draggable';
 
+
 const UserPage = (props) => {
   const backgroundImageStyle = {
     backgroundImage: `url("${habitImg}")`,
