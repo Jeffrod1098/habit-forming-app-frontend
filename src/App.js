@@ -10,7 +10,7 @@ import HabitList from "./HabitList";
 import UserPage from "./UserPage";
 
 function App() {
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState("user");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   return (
