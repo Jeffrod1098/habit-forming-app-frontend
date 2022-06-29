@@ -114,7 +114,7 @@ const CreateHabit = () => {
                   class="form-check-label inline-block text-gray-800"
                   for="inlineRadio10"
                 >
-                  Mon
+                  Mon 
                 </label>
               </div>
               <div class="form-check form-check-inline">

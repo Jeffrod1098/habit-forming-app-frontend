@@ -110,7 +110,7 @@ const Login = ({ password, setPassword, userName, setUserName }) => {
   duration-150
   ease-in-out"
           >
-            Sign up
+            Login
           </button>
         </form>
       </div>
