@@ -15,6 +15,7 @@ const UserPage = (props) => {
   };
 
   const [userHabits, setUserHabits] = useState([]);
+  // const [deleteHabits, setDeleteHabits] = useState([]);
 
   React.useEffect(() => {
     async function getUserHabits() {
@@ -24,10 +25,19 @@ const UserPage = (props) => {
     }
     getUserHabits();
   }, []);
+  async function deleteHabits(id){
+    const response = await axios.delete(`http://localhost:4000/userHabits/${id}`);
+     console.log(response.data)
+    // setDeleteHabits(response.data);
+  }
+  // React.useEffect(() =>{
+  //   deleteHabits();
+  // }, [])
 
   const user = props.userName;
   // console.log(userHabits);
   const nameMatch = userHabits.map((users) => {
+    console.log(users);
     if (user == users.username) {
       return (
         <Draggable>
@@ -38,7 +48,7 @@ const UserPage = (props) => {
               </div>
               <div className="p-6">
                 <p className="text-gray-700 text-base mb-4">{users.goal}</p>
-                <button
+                <button onClick={() => deleteHabits(users._id)}
                   type="button"
                   className="  w-full
 px-6
@@ -56,8 +66,7 @@ focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0
 active:bg-red-800 active:shadow-lg
 transition
 duration-150
-ease-in-out"
-                >
+ease-in-out"  >
                   Delete
                 </button>
                 <button
