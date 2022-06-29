@@ -1,10 +1,11 @@
 import React from "react";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect,  } from "react";
 import habitImg from "./image/habits.jpg";
 import Nav from "./Nav";
 import "./UserPage.css";
 import Draggable from "react-draggable";
+import { Link } from "react-router-dom";
 
 
 const UserPage = (props) => {
@@ -69,6 +70,7 @@ duration-150
 ease-in-out"  >
                   Delete
                 </button>
+                <Link to='/EditHabit'>
                 <button
                   type="button"
                   className="  w-full
@@ -91,6 +93,7 @@ ease-in-out"
                 >
                   EDIT
                 </button>
+                </Link>
               </div>
             </div>
           </div>
