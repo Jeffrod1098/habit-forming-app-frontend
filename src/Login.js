@@ -20,7 +20,7 @@ const Login = ({ password, setPassword, userName, setUserName }) => {
         }
       )
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         navigate("/home", { replace: true });
       });
   };

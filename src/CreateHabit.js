@@ -5,12 +5,13 @@ import habitImg from "./image/habits.jpg";
 import Nav from "./Nav";
 import "./Createhabit.css";
 
-const CreateHabit = () => {
+const CreateHabit = (props) => {
   const [habitName, setHabitName] = useState({});
   const [goal, setGoal] = useState({});
 
   const click = () => {
-    axios.post("http://localhost:4000/", {
+    axios.post("http://localhost:4000/userHabits", {
+      username: props.userName,    
       habitName: habitName,
       goal: goal,
     });
@@ -110,10 +111,7 @@ const CreateHabit = () => {
                   id="inlineRadio1"
                   value="option1"
                 />
-                <label
-                  className="form-check-label inline-block text-gray-800"
-                  for="inlineRadio10"
-                >
+                <label className="form-check-label inline-block text-gray-800">
                   Mon
                 </label>
               </div>
@@ -125,10 +123,7 @@ const CreateHabit = () => {
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label
-                  className="form-check-label inline-block text-gray-800"
-                  for="inlineRadio20"
-                >
+                <label className="form-check-label inline-block text-gray-800">
                   Tue
                 </label>
               </div>
@@ -140,10 +135,7 @@ const CreateHabit = () => {
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label
-                  className="form-check-label inline-block text-gray-800"
-                  for="inlineRadio20"
-                >
+                <label className="form-check-label inline-block text-gray-800">
                   Wed
                 </label>
               </div>
@@ -155,10 +147,7 @@ const CreateHabit = () => {
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label
-                  className="form-check-label inline-block text-gray-800"
-                  for="inlineRadio20"
-                >
+                <label className="form-check-label inline-block text-gray-800">
                   Thu
                 </label>
               </div>
@@ -170,10 +159,7 @@ const CreateHabit = () => {
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label
-                  className="form-check-label inline-block text-gray-800"
-                  for="inlineRadio20"
-                >
+                <label className="form-check-label inline-block text-gray-800">
                   Fri
                 </label>
               </div>
@@ -185,10 +171,7 @@ const CreateHabit = () => {
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label
-                  className="form-check-label inline-block text-gray-800"
-                  for="inlineRadio20"
-                >
+                <label className="form-check-label inline-block text-gray-800">
                   Sat
                 </label>
               </div>
@@ -200,10 +183,7 @@ const CreateHabit = () => {
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label
-                  className="form-check-label inline-block text-gray-800"
-                  for="inlineRadio20"
-                >
+                <label className="form-check-label inline-block text-gray-800">
                   Sun
                 </label>
               </div>
