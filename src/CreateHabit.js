@@ -5,12 +5,13 @@ import habitImg from "./image/habits.jpg";
 import Nav from "./Nav";
 import "./Createhabit.css";
 
-const CreateHabit = () => {
+const CreateHabit = (props) => {
   const [habitName, setHabitName] = useState({});
   const [goal, setGoal] = useState({});
 
   const click = () => {
-    axios.post("http://localhost:4000/", {
+    axios.post("http://localhost:4000/userHabits", {
+      username: props.userName,    
       habitName: habitName,
       goal: goal,
     });
