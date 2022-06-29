@@ -19,7 +19,7 @@ const HabitList = () => {
   React.useEffect(() => {
     async function getHabits() {
       const response = await axios.get("http://localhost:4000/habits");
-      console.log(response.data);
+      //   console.log(response.data);
       setHabits(response.data);
     }
     getHabits();
