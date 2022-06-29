@@ -1,45 +1,45 @@
 import React from "react";
-import "./HabitList.css"
+import "./HabitList.css";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
-import Nav from "./Nav"
-import habitImg from "./image/habits.jpg"
-import Draggable from 'react-draggable';
-
+import Nav from "./Nav";
+import habitImg from "./image/habits.jpg";
+import Draggable from "react-draggable";
 
 const HabitList = () => {
+  const backgroundImageStyle = {
+    backgroundImage: `url("${habitImg}")`,
+    backgroundSize: "cover",
+    width: "100vw",
+  };
 
-    const backgroundImageStyle = {
-        backgroundImage: `url("${habitImg}")`,
-        backgroundSize: "cover",
-        width: "100vw",
+  const [habits, setHabits] = useState([]);
+
+  React.useEffect(() => {
+    async function getHabits() {
+      const response = await axios.get("http://localhost:4000/habits");
+      //   console.log(response.data);
+      setHabits(response.data);
     }
+    getHabits();
+  }, []);
 
-    const [habits,setHabits]= useState([])
-
-    React.useEffect(() => {
-        async function getHabits(){
-            const response = await axios.get('http://localhost:4000/habits')
-            console.log(response.data)
-            setHabits(response.data)
-        }
-        getHabits()
-    },[])
-    
-    {habits.map((habit) => {
-        return (
-            
-            <div class="flex justify-center">
-                <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
-                    <div class="py-3 px-6 border-b border-gray-300">
-                        {habit.className}
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-700 text-base mb-4">
-                            {habit.description}
-                        </p>
-                        <button type="button" class="  w-full
+  {
+    habits.map((habit) => {
+      return (
+        <div className="flex justify-center">
+          <div className="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+            <div className="py-3 px-6 border-b border-gray-300">
+              {habit.className}
+            </div>
+            <div className="p-6">
+              <p className="text-gray-700 text-base mb-4">
+                {habit.description}
+              </p>
+              <button
+                type="button"
+                className="  w-full
 px-6
 py-2.5
 bg-red-600
@@ -55,19 +55,21 @@ focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0
 active:bg-red-800 active:shadow-lg
 transition
 duration-150
-ease-in-out">Delete</button>
-                    </div>
-                </div>
+ease-in-out"
+              >
+                Delete
+              </button>
             </div>
-            
-        )
-    })}
+          </div>
+        </div>
+      );
+    });
+  }
 
-
-    return (
-        <div className='App' style={backgroundImageStyle}>
-            <Nav />
-            {/* {
+  return (
+    <div className="App" style={backgroundImageStyle}>
+      <Nav />
+      {/* {
                 habits.map((habit) => {
                     return(
                         <div key={habit.id}>
@@ -79,7 +81,7 @@ ease-in-out">Delete</button>
                 })
             } */}
 
-            {/* <div class="flex justify-center">
+      {/* <div class="flex justify-center">
   <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
     <div class="py-3 px-6 border-b border-gray-300">
       Habit Name
@@ -109,19 +111,21 @@ ease-in-out">Delete</button>
   </div>
 </div> */}
 
-{habits.map((habit) => {
+      {habits.map((habit) => {
         return (
-            <Draggable>
-            <div class="flex justify-center">
-                <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
-                    <div class="py-3 px-6 border-b border-gray-300">
-                        {habit.name}
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-700 text-base mb-4">
-                            {habit.description}
-                        </p>
-                        <button type="button" class="  w-full
+          <Draggable>
+            <div className="flex justify-center">
+              <div className="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                <div className="py-3 px-6 border-b border-gray-300">
+                  {habit.name}
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 text-base mb-4">
+                    {habit.description}
+                  </p>
+                  <button
+                    type="button"
+                    className="  w-full
 px-6
 py-2.5
 bg-red-600
@@ -137,16 +141,18 @@ focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0
 active:bg-red-800 active:shadow-lg
 transition
 duration-150
-ease-in-out">Delete</button>
-                    </div>
+ease-in-out"
+                  >
+                    Delete
+                  </button>
                 </div>
+              </div>
             </div>
-            </Draggable>
-        )
-    })}
+          </Draggable>
+        );
+      })}
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default HabitList
+export default HabitList;

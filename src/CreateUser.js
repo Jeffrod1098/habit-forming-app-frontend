@@ -25,7 +25,7 @@ const CreateUser = ({
         password: password,
       })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         navigate("/home", { replace: true });
       });
   };
