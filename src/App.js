@@ -8,6 +8,7 @@ import Login from "./Login";
 import { Route, Routes } from "react-router-dom";
 import HabitList from "./HabitList";
 import UserPage from "./UserPage";
+import EditHabit from "./EditHabit";
 
 function App() {
   const [userName, setUserName] = useState("user");
@@ -49,6 +50,7 @@ function App() {
             }
           />
           <Route path="/habitList" element={<HabitList />} />
+          <Route path="/EditHabit" element={<EditHabit userName={userName}/>}/>
         </Routes>
       </main>
     </div>
