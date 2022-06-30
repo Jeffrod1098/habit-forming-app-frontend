@@ -55,7 +55,8 @@ const CreateHabit = (props) => {
           Create a MyHabits
         </h1>
         {/* Heading */}
-        <div className="form block p-6 rounded-lg shadow-lg bg-white max-w-md">
+        <div className="formContainer">
+        <div className="block p-6 rounded-lg shadow-lg bg-white max-w-md">
           <form onSubmit={click}>
             <div className="form-group mb-6">
               <input
@@ -214,6 +215,8 @@ const CreateHabit = (props) => {
             </button>
           </form>
         </div>
+        </div>
+
       </div>
     </div>
   );

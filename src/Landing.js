@@ -10,6 +10,7 @@ const Landing = () => {
         backgroundImage: `url("${habitImg}")`,
         backgroundSize: "cover",
         width: "100vw",
+        
     }
     return (
         <div>
