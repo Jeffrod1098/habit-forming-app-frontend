@@ -75,7 +75,7 @@ ease-in-out"
                 >
                   Delete
                 </button>
-                <Link to="/EditHabit">
+                <Link to="/EditHabit/:id">
                   <button
                     type="button"
                     className="  w-full
