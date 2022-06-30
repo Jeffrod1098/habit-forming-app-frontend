@@ -51,7 +51,7 @@ const HabitList = (props) => {
     habits.map((habit) => {
       return (
         <div className="flex justify-center">
-          {/* <form onSubmit={handleSubmit}> */}
+       
            <div className="block rounded-lg shadow-lg bg-white max-w-sm text-center">
             <div className="py-3 px-6 border-b border-gray-300">
               {habit.className}
@@ -65,7 +65,7 @@ const HabitList = (props) => {
               </button>
             </div>
           </div>
-          </form>
+          
         </div>
       );
     });
