@@ -4,6 +4,7 @@ import { useState } from "react";
 import habitImg from "./image/habits.jpg";
 import Nav from "./Nav";
 import "./Createhabit.css";
+import { data } from "autoprefixer";
 
 const CreateHabit = (props) => {
   const [habitName, setHabitName] = useState({});
@@ -31,6 +32,10 @@ const CreateHabit = (props) => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
+    axios.post("http://localhost:4000/userHabits",data)
+    .then(res => {
+      console.log(res);
+    });
     click();
   };
   // const backgroundImageStyle = {
@@ -46,6 +51,7 @@ const CreateHabit = (props) => {
   };
 
   return (
+    
     <div style={backgroundImageStyle}>
       <Nav />
       {/* NavBar */}
@@ -56,25 +62,12 @@ const CreateHabit = (props) => {
         </h1>
         {/* Heading */}
         <div className="form block p-6 rounded-lg shadow-lg bg-white max-w-md">
-          <form onSubmit={click}>
+          <form onSubmit={handleSubmit}>
             <div className="form-group mb-6">
               <input
                 onChange={handleHabitNameChange}
                 type="text"
-                className="form-control block
-    w-full
-    px-3
-    py-1.5
-    text-base
-    font-normal
-    text-gray-700
-    bg-white bg-clip-padding
-    border border-solid border-gray-300
-    rounded
-    transition
-    ease-in-out
-    m-0
-    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="form-control block w-full   px-3 py-1.5  text-base    font-normal  text-gray-700   bg-white bg-clip-padding   border border-solid border-gray-300 rounded  transition ease-in-out   m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput125"
                 placeholder="Habit Name"
               />
@@ -83,8 +76,7 @@ const CreateHabit = (props) => {
               <input
                 onChange={handleGoalChange}
                 type="text"
-                className="form-control block
-    w-full
+                className="form-control block w-full
     px-3
     py-1.5
     text-base
@@ -191,30 +183,16 @@ const CreateHabit = (props) => {
 
             <button
               type="submit"
-              className="
-  w-full
-  px-6
-  py-2.5
-  bg-blue-600
-  text-white
-  font-medium
-  text-xs
-  leading-tight
-  uppercase
-  rounded
-  shadow-md
-  hover:bg-blue-700 hover:shadow-lg
-  focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-  active:bg-blue-800 active:shadow-lg
-  transition
-  duration-150
-  ease-in-out"
-            >
+              className="w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
               Create
             </button>
+
           </form>
+
         </div>
+
       </div>
+
     </div>
   );
 };
