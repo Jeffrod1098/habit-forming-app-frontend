@@ -25,14 +25,14 @@ const CreateHabit = (props) => {
   // }
 
   const handleHabitNameChange = (event) => {
-    setHabitName(event.target.value);
+    setHabitName();
   };
   const handleGoalChange = (event) => {
     setGoal(event.target.value);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:4000/userHabits", data)
+    axios.post("http://localhost:4000/userHabits",data)
     .then(res => {
       console.log(res);
     });
@@ -76,19 +76,7 @@ const CreateHabit = (props) => {
               <input
                 onChange={handleGoalChange}
                 type="text"
-                className="form-control block w-full
-    px-3
-    py-1.5
-    text-base
-    font-normal
-    text-gray-700
-    bg-white bg-clip-padding
-    border border-solid border-gray-300
-    rounded
-    transition
-    ease-in-out
-    m-0
-    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput126"
                 placeholder="Brief Description of Habit"
               />

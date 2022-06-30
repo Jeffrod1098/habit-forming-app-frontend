@@ -6,8 +6,9 @@ import { useState } from "react";
 import Nav from "./Nav";
 import habitImg from "./image/habits.jpg";
 import Draggable from "react-draggable";
+import { data } from "autoprefixer";
 
-const HabitList = () => {
+const HabitList = (props) => {
   const backgroundImageStyle = {
     backgroundImage: `url("${habitImg}")`,
     backgroundSize: "cover",
@@ -15,6 +16,27 @@ const HabitList = () => {
   };
 
   const [habits, setHabits] = useState([]);
+  const [goal, setGoal] = useState({});
+  const [habitName, setHabitName] = useState({});
+
+
+  const click = () => {
+    axios.post("http://localhost:4000/userHabits", {
+      username: props.userName,    
+      habitName: habitName,
+      goal: goal,
+    });
+  };
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   axios.post("http://localhost:4000/userHabits",data)
+  //   .then(res => {
+  //     console.log(res);
+  //   });
+  //   click();
+  // };
+
 
   React.useEffect(() => {
     async function getHabits() {
@@ -29,7 +51,8 @@ const HabitList = () => {
     habits.map((habit) => {
       return (
         <div className="flex justify-center">
-          <div className="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+          {/* <form onSubmit={handleSubmit}> */}
+           <div className="block rounded-lg shadow-lg bg-white max-w-sm text-center">
             <div className="py-3 px-6 border-b border-gray-300">
               {habit.className}
             </div>
@@ -37,16 +60,12 @@ const HabitList = () => {
               <p className="text-gray-700 text-base mb-4">
                 {habit.description}
               </p>
-              <button
-                type="button"
-                className="  w-full px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lgtransition
-duration-150
-ease-in-out"
-              >
+              <button type="button"className="w-full px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lgtransition       duration-150 ease-in-out">
                 Delete
               </button>
             </div>
           </div>
+          </form>
         </div>
       );
     });
@@ -60,6 +79,7 @@ ease-in-out"
         return (
           <Draggable>
             <div className="flex justify-center" >
+              {/* <form onSubmit={handleSubmit}> */}
               <div className="block rounded-lg shadow-lg bg-white max-w-sm text-center">
                 <div className="py-3 px-6 border-b border-gray-300">
                   {habit.name}
@@ -92,10 +112,12 @@ ease-in-out"
                   </button>
                 </div>
               </div>
+              </form>
             </div>
           </Draggable>
         );
       })}
+
     </div>
   );
 };
