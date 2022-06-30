@@ -110,11 +110,11 @@ ease-in-out"
     </div>
   </div>
 </div> */}
-
+                        <h1 className="text-5xl text-slate-700 font-bold">Habit Inspiration</h1>
       {habits.map((habit) => {
         return (
           <Draggable>
-            <div className="flex justify-center">
+            <div className="cardContainers">
               <div className="block rounded-lg shadow-lg bg-white max-w-sm text-center">
                 <div className="py-3 px-6 border-b border-gray-300">
                   {habit.name}

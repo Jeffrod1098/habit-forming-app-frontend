@@ -3,8 +3,19 @@
     /* margin-left: 5%; */
     padding-top: 3%;
     justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 2%;
   }
 
   .logo {
     margin-left: 3%;
   }
+
+  @media screen and (max-width: 480px) {
+    .logo{
+      display: none;
+    }
+  }
+
+  /* .navItems{
+  } */

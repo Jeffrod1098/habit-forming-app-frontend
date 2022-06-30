@@ -19,7 +19,9 @@
     margin-top: 2%;
   }
   
-  .form{
-    margin-left: 35%;
-    margin-top: 15%;
-  }
+  .formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}

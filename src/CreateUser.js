@@ -51,7 +51,7 @@ const CreateUser = ({
       <Nav />
 
       {/* under nav bar  */}
-
+      <h1 className="text-5xl text-slate-700 font-bold">Register</h1>
       <div className="formContainer">
         <div className="block p-6 rounded-lg shadow-lg bg-white max-w-md">
           <form onSubmit={click}>

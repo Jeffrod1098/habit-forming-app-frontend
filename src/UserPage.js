@@ -108,7 +108,9 @@ ease-in-out"
       <h1 className="text-5xl text-slate-700 font-bold">
         Welcome {props.userName}
       </h1>
-      <div>{nameMatch}</div>
+      <div className="userCard">
+        <div>{nameMatch}</div>
+      </div>
     </div>
   );
 };
