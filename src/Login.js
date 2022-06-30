@@ -45,14 +45,13 @@ const Login = ({ password, setPassword, userName, setUserName }) => {
       {/* under nav bar  */}
       <h1 className="text-5xl text-slate-700 font-bold">Login</h1>
       <div className="formContainer">
-      <div className="form block p-6 rounded-lg shadow-lg bg-white max-w-md">
-
-<form onSubmit={click}>
-  <div className="form-group mb-6">
-    <input
-      onChange={handleUserNameChange}
-      type="text"
-      className="form-control block
+        <div className="form block p-6 rounded-lg shadow-lg bg-white max-w-md">
+          <form onSubmit={click}>
+            <div className="form-group mb-6">
+              <input
+                onChange={handleUserNameChange}
+                type="text"
+                className="form-control block
 w-full
 px-3
 py-1.5
@@ -66,15 +65,15 @@ transition
 ease-in-out
 m-0
 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-      id="exampleInput125"
-      placeholder="User Name"
-    />
-  </div>
-  <div className="form-group mb-6">
-    <input
-      onChange={handlePasswordChange}
-      type="password"
-      className="form-control block
+                id="exampleInput125"
+                placeholder="User Name"
+              />
+            </div>
+            <div className="form-group mb-6">
+              <input
+                onChange={handlePasswordChange}
+                type="password"
+                className="form-control block
 w-full
 px-3
 py-1.5
@@ -88,13 +87,13 @@ transition
 ease-in-out
 m-0
 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-      id="exampleInput126"
-      placeholder="Password"
-    />
-  </div>
-  <button
-    type="submit"
-    className="
+                id="exampleInput126"
+                placeholder="Password"
+              />
+            </div>
+            <button
+              type="submit"
+              className="
 w-full
 px-6
 py-2.5
@@ -112,13 +111,12 @@ active:bg-blue-800 active:shadow-lg
 transition
 duration-150
 ease-in-out"
-  >
-    Login
-  </button>
-</form>
-</div>
-          </div>
-
+            >
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
