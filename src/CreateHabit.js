@@ -30,7 +30,15 @@ const CreateHabit = (props) => {
   const handleGoalChange = (event) => {
     setGoal(event.target.value);
   };
-
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   axios
+  //     .post("https://myhabitsproject.herokuapp.com/userHabits", data)
+  //     .then((res) => {
+  //       console.log(res);
+  //     });
+  //   click();
+  // };
   // const backgroundImageStyle = {
   //     backgroundImage: `url("${habitImg}")`,
   //     backgroundSize: "cover",

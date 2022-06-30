@@ -54,7 +54,7 @@ function App() {
           />
           <Route path="/habitList" element={<HabitList userName={userName}/>} />
           <Route
-            path="/editHabit/:id"
+            path="/editHabits/:id"
             element={<EditHabit userName={userName} />}
           />
         </Routes>
