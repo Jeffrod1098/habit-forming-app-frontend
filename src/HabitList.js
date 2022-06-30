@@ -6,8 +6,9 @@ import { useState } from "react";
 import Nav from "./Nav";
 import habitImg from "./image/habits.jpg";
 import Draggable from "react-draggable";
+import { data } from "autoprefixer";
 
-const HabitList = () => {
+const HabitList = (props) => {
   const backgroundImageStyle = {
     backgroundImage: `url("${habitImg}")`,
     backgroundSize: "cover",
@@ -15,6 +16,25 @@ const HabitList = () => {
   };
 
   const [habits, setHabits] = useState([]);
+  const [goal, setGoal] = useState({});
+  const [habitName, setHabitName] = useState({});
+
+  const click = () => {
+    axios.post("https://myhabitsproject.herokuapp.com/userHabits", {
+      username: props.userName,
+      habitName: habitName,
+      goal: goal,
+    });
+  };
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   axios.post("http://localhost:4000/userHabits",data)
+  //   .then(res => {
+  //     console.log(res);
+  //   });
+  //   click();
+  // };
 
   React.useEffect(() => {
     async function getHabits() {
@@ -41,23 +61,7 @@ const HabitList = () => {
               </p>
               <button
                 type="button"
-                className="  w-full
-px-6
-py-2.5
-bg-red-600
-text-white
-font-medium
-text-xs
-leading-tight
-uppercase
-rounded
-shadow-md
-hover:bg-red-700 hover:shadow-lg
-focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0
-active:bg-red-800 active:shadow-lg
-transition
-duration-150
-ease-in-out"
+                className="w-full px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lgtransition       duration-150 ease-in-out"
               >
                 Delete
               </button>
@@ -112,7 +116,7 @@ ease-in-out"
     </div>
   </div>
 </div> */}
-                        <h1 className="text-5xl text-slate-700 font-bold">Habit Inspiration</h1>
+      <h1 className="text-5xl text-slate-700 font-bold">Habit Inspiration</h1>
       {habits.map((habit) => {
         return (
           <Draggable>
@@ -145,7 +149,7 @@ transition
 duration-150
 ease-in-out"
                   >
-                    Delete
+                    Add to list
                   </button>
                 </div>
               </div>
