@@ -19,7 +19,7 @@ const CreateUser = ({
   const click = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/userLogin/register", {
+      .post("https://myhabitsproject.herokuapp.com/userLogin/register", {
         username: userName,
         email: email,
         password: password,

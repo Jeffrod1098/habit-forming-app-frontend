@@ -10,8 +10,8 @@ const CreateHabit = (props) => {
   const [goal, setGoal] = useState({});
 
   const click = () => {
-    axios.post("http://localhost:4000/userHabits", {
-      username: props.userName,    
+    axios.post("https://myhabitsproject.herokuapp.com/userHabits", {
+      username: props.userName,
       habitName: habitName,
       goal: goal,
     });

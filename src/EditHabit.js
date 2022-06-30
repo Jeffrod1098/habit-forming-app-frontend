@@ -1,27 +1,29 @@
 import { useState, useEffect } from "react";
-import axios from "axios"
-import {useParams} from 'react-router-dom'
+import axios from "axios";
+import { useParams } from "react-router-dom";
 import habitImg from "./image/habits.jpg";
 import Nav from "./Nav";
 
 const backgroundImageStyle = {
-    backgroundImage: `url("${habitImg}")`,
-    backgroundSize: "cover",
-    width: "100vw",
-}
+  backgroundImage: `url("${habitImg}")`,
+  backgroundSize: "cover",
+  width: "100vw",
+};
 
-const EditHabit = props => {
+const EditHabit = (props) => {
+  const [habitName, setHabitName] = useState({});
+  const [goal, setGoal] = useState({});
 
-    const [habitName, setHabitName] = useState({});
-    const [goal, setGoal] = useState({});
-        
   const click = (e) => {
-    e.preventDefault()
-    axios.put(`http://localhost:4000/userHabits/${props.userName}`, {
+    e.preventDefault();
+    axios.put(
+      `https://myhabitsproject.herokuapp.com/userHabits/${props.userName}`,
+      {
         username: props.username,
-        habitName:habitName,
+        habitName: habitName,
         goal: goal,
-    });
+      }
+    );
   };
 
   const handleHabitChange = (event) => {
@@ -30,19 +32,16 @@ const EditHabit = props => {
   const handleGoalChange = (event) => {
     setGoal(event.target.value);
   };
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-//     click();
-//   };
-    return(
-<div style={backgroundImageStyle}>
+  //   const handleSubmit = (event) => {
+  //     event.preventDefault();
+  //     click();
+  //   };
+  return (
+    <div style={backgroundImageStyle}>
       <Nav />
       {/* NavBar */}
       <div className="App">
-        <h1 className="text-5xl text-slate-700 font-bold">
-          {" "}
-          Edit MyHabits
-        </h1>
+        <h1 className="text-5xl text-slate-700 font-bold"> Edit MyHabits</h1>
         {/* Heading */}
         <div className="form block p-6 rounded-lg shadow-lg bg-white max-w-md">
           <form onSubmit={click}>
@@ -207,8 +206,5 @@ const EditHabit = props => {
     </div>
   );
 };
-    
 
-    
-
-export default EditHabit
+export default EditHabit;

@@ -1,12 +1,11 @@
 import React from "react";
 import axios from "axios";
-import { useState, useEffect,  } from "react";
+import { useState, useEffect } from "react";
 import habitImg from "./image/habits.jpg";
 import Nav from "./Nav";
 import "./UserPage.css";
 import Draggable from "react-draggable";
 import { Link } from "react-router-dom";
-
 
 const UserPage = (props) => {
   const backgroundImageStyle = {
@@ -20,15 +19,19 @@ const UserPage = (props) => {
 
   React.useEffect(() => {
     async function getUserHabits() {
-      const response = await axios.get("http://localhost:4000/userHabits/");
+      const response = await axios.get(
+        "https://myhabitsproject.herokuapp.com/userHabits/"
+      );
       //  console.log(response.data)
       setUserHabits(response.data);
     }
     getUserHabits();
   }, []);
-  async function deleteHabits(id){
-    const response = await axios.delete(`http://localhost:4000/userHabits/${id}`);
-     console.log(response.data)
+  async function deleteHabits(id) {
+    const response = await axios.delete(
+      `https://myhabitsproject.herokuapp.com/userHabits/${id}`
+    );
+    console.log(response.data);
     // setDeleteHabits(response.data);
   }
   // React.useEffect(() =>{
@@ -49,7 +52,8 @@ const UserPage = (props) => {
               </div>
               <div className="p-6">
                 <p className="text-gray-700 text-base mb-4">{users.goal}</p>
-                <button onClick={() => deleteHabits(users._id)}
+                <button
+                  onClick={() => deleteHabits(users._id)}
                   type="button"
                   className="  w-full
 px-6
@@ -67,13 +71,14 @@ focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0
 active:bg-red-800 active:shadow-lg
 transition
 duration-150
-ease-in-out"  >
+ease-in-out"
+                >
                   Delete
                 </button>
-                <Link to='/EditHabit'>
-                <button
-                  type="button"
-                  className="  w-full
+                <Link to="/EditHabit">
+                  <button
+                    type="button"
+                    className="  w-full
 px-6
 py-2.5
 bg-blue-600
@@ -90,9 +95,9 @@ active:bg-blue-800 active:shadow-lg
 transition
 duration-150
 ease-in-out"
-                >
-                  EDIT
-                </button>
+                  >
+                    EDIT
+                  </button>
                 </Link>
               </div>
             </div>
