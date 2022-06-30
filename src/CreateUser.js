@@ -19,7 +19,7 @@ const CreateUser = ({
   const click = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/userLogin/register", {
+      .post("https://myhabitsproject.herokuapp.com/userLogin/register", {
         username: userName,
         email: email,
         password: password,
@@ -51,7 +51,7 @@ const CreateUser = ({
       <Nav />
 
       {/* under nav bar  */}
-
+      <h1 className="text-5xl text-slate-700 font-bold">Register</h1>
       <div className="formContainer">
         <div className="block p-6 rounded-lg shadow-lg bg-white max-w-md">
           <form onSubmit={click}>
@@ -75,6 +75,7 @@ const CreateUser = ({
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput124"
                 placeholder="User Name"
+                required
               />
             </div>
             <div className="form-group mb-6">
@@ -97,6 +98,7 @@ const CreateUser = ({
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput125"
                 placeholder="Email address"
+                required
               />
             </div>
             <div className="form-group mb-6">
@@ -119,6 +121,7 @@ const CreateUser = ({
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput126"
                 placeholder="Password"
+                required
               />
             </div>
             <button

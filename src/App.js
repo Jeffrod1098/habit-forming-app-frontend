@@ -37,7 +37,10 @@ function App() {
               />
             }
           />
-          <Route path="/createHabit" element={<CreateHabit userName={userName} />} />
+          <Route
+            path="/createHabit"
+            element={<CreateHabit userName={userName} />}
+          />
           <Route
             path="/login"
             element={
@@ -49,8 +52,11 @@ function App() {
               />
             }
           />
-          <Route path="/habitList" element={<HabitList />} />
-          <Route path="/EditHabit" element={<EditHabit userName={userName}/>}/>
+          <Route path="/habitList" element={<HabitList userName={userName}/>} />
+          <Route
+            path="/editHabit/:id"
+            element={<EditHabit userName={userName} />}
+          />
         </Routes>
       </main>
     </div>
