@@ -32,7 +32,7 @@ const CreateHabit = (props) => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:4000/userHabits",data)
+    axios.post("http://localhost:4000/userHabits", data)
     .then(res => {
       console.log(res);
     });

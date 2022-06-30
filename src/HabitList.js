@@ -39,21 +39,7 @@ const HabitList = () => {
               </p>
               <button
                 type="button"
-                className="  w-full
-px-6
-py-2.5
-bg-red-600
-text-white
-font-medium
-text-xs
-leading-tight
-uppercase
-rounded
-shadow-md
-hover:bg-red-700 hover:shadow-lg
-focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0
-active:bg-red-800 active:shadow-lg
-transition
+                className="  w-full px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lgtransition
 duration-150
 ease-in-out"
               >
@@ -69,52 +55,11 @@ ease-in-out"
   return (
     <div className="App" style={backgroundImageStyle}>
       <Nav />
-      {/* {
-                habits.map((habit) => {
-                    return(
-                        <div key={habit.id}>
-                            <h2>{habit.name}</h2>
-                            <h3>Description:</h3>
-                            <p>{habit.description}</p>
-                        </div>
-                    )
-                })
-            } */}
-
-      {/* <div class="flex justify-center">
-  <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
-    <div class="py-3 px-6 border-b border-gray-300">
-      Habit Name
-    </div>
-    <div class="p-6">
-      <p class="text-gray-700 text-base mb-4">
-        With supporting text below as a natural lead-in to additional content.
-      </p>
-      <button type="button" class="  w-full
-  px-6
-  py-2.5
-  bg-red-600
-  text-white
-  font-medium
-  text-xs
-  leading-tight
-  uppercase
-  rounded
-  shadow-md
-  hover:bg-red-700 hover:shadow-lg
-  focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0
-  active:bg-red-800 active:shadow-lg
-  transition
-  duration-150
-  ease-in-out">Delete</button>
-    </div>
-  </div>
-</div> */}
 
       {habits.map((habit) => {
         return (
           <Draggable>
-            <div className="flex justify-center">
+            <div className="flex justify-center" >
               <div className="block rounded-lg shadow-lg bg-white max-w-sm text-center">
                 <div className="py-3 px-6 border-b border-gray-300">
                   {habit.name}
@@ -143,7 +88,7 @@ transition
 duration-150
 ease-in-out"
                   >
-                    Delete
+                    Add to list
                   </button>
                 </div>
               </div>
