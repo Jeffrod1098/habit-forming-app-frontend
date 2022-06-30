@@ -3,6 +3,8 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import habitImg from "./image/habits.jpg";
 import Nav from "./Nav";
+import { Navigate } from "react-router-dom";
+
 
 const backgroundImageStyle = {
   backgroundImage: `url("${habitImg}")`,
@@ -14,16 +16,24 @@ const EditHabit = (props) => {
   const [habitName, setHabitName] = useState({});
   const [goal, setGoal] = useState({});
 
+
+  const navigate = Navigate()
+
+const id = useParams().id
+console.log(id)
+
   const click = (e) => {
     e.preventDefault();
     axios.put(
-      `https://myhabitsproject.herokuapp.com/userHabits/${props.userName}`,
+      `https://myhabitsproject.herokuapp.com/userHabits/${id}`,
       {
-        username: props.username,
+        username: props.userName,
         habitName: habitName,
         goal: goal,
-      }
-    );
+      }).then((home) => {
+        navigate("/home", { replace: true });
+      })
+
   };
 
   const handleHabitChange = (event) => {

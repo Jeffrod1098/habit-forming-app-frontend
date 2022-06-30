@@ -5,7 +5,8 @@ import habitImg from "./image/habits.jpg";
 import Nav from "./Nav";
 import "./UserPage.css";
 import Draggable from "react-draggable";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
 
 const UserPage = (props) => {
   const backgroundImageStyle = {
@@ -13,6 +14,7 @@ const UserPage = (props) => {
     backgroundSize: "cover",
     width: "100vw",
   };
+
 
   const [userHabits, setUserHabits] = useState([]);
   // const [deleteHabits, setDeleteHabits] = useState([]);
@@ -75,7 +77,7 @@ ease-in-out"
                 >
                   Delete
                 </button>
-                <Link to="/EditHabit/:id">
+                <Link to={`/editHabits/${users._id}`}>
                   <button
                     type="button"
                     className="  w-full
