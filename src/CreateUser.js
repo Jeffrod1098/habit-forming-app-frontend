@@ -75,6 +75,7 @@ const CreateUser = ({
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput124"
                 placeholder="User Name"
+                required
               />
             </div>
             <div className="form-group mb-6">
@@ -97,6 +98,7 @@ const CreateUser = ({
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput125"
                 placeholder="Email address"
+                required
               />
             </div>
             <div className="form-group mb-6">
@@ -119,6 +121,7 @@ const CreateUser = ({
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput126"
                 placeholder="Password"
+                required
               />
             </div>
             <button
