@@ -12,7 +12,7 @@ HTML, CSS, Javascript, React, Mongoose, Express, Tailwind, Axios
 
 ![9e1c404d-12d4-4bbd-9c16-5c2b8fe3ebc8](https://user-images.githubusercontent.com/99563824/176451896-66dc0c93-d7d9-4e03-9b0c-d3ef059aba05.png)
 
-##User Stories:
+## User Stories:
 
 - As a user, I would like to have a landing page with a description of the app
 - As a user, I'd like to be able to log in and keep track of my progress, or add new goals.
