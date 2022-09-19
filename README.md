@@ -4,7 +4,7 @@
 
 MyHabits is an app to set and keep track of goals.
 
-##Technology:
+## Technology:
 
 HTML, CSS, Javascript, React, Mongoose, Express, Tailwind, Axios
 
